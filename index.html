@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--
+  ============================================================
+  YAYINA ALMADAN ÖNCE DOLDURULACAK 2 ŞEY
+  1) Kasa ölçüleri (U x G x Y) ........ "Kasa Ölçüleri" bölümü (çizim + liste)
+  2) Alan adı ve araç fotoğrafı ....... aşağıdaki https://ORNEK-DOMAIN.com
+                                        adreslerini gerçek alan adıyla değiştirin;
+                                        fotoğrafı şu yola koyun:
+                                        assets/karamanli-nakliyat-ford-transit.jpg
+  ============================================================
+-->
+
+<title>Karamanlı Nakliyat | Evden Eve ve Şehirler Arası Nakliyat — Hümmet Karamanlı</title>
+<meta name="description" content="Karamanlı Nakliyat — evden eve ve şehirler arası nakliyat. Ev, ofis ve parça eşya taşıma, mobilya imalat ve kurulum. Tel: 0536 334 97 26 — 0542 460 29 29">
+<meta name="theme-color" content="#0B1A38">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://ORNEK-DOMAIN.com/">
+
+<!-- Open Graph / Twitter — WhatsApp'ta paylaşıldığında önizleme için -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:site_name" content="Karamanlı Nakliyat">
+<meta property="og:title" content="Karamanlı Nakliyat | Evden Eve ve Şehirler Arası Nakliyat">
+<meta property="og:description" content="Ev, ofis ve parça eşya taşıma, mobilya imalat ve kurulum. Güvenli, hızlı, ekonomik. Hümmet Karamanlı: 0536 334 97 26">
+<meta property="og:url" content="https://ORNEK-DOMAIN.com/">
+<meta property="og:image" content="https://ORNEK-DOMAIN.com/assets/karamanli-nakliyat-ford-transit.jpg">
+<meta property="og:image:alt" content="Karamanlı Nakliyat'ın Ford Transit kapalı kasa kamyoneti, firma yazılı kasası ile">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Karamanlı Nakliyat | Evden Eve ve Şehirler Arası Nakliyat">
+<meta name="twitter:description" content="Ev, ofis ve parça eşya taşıma, mobilya imalat ve kurulum. Güvenli, hızlı, ekonomik. Hümmet Karamanlı: 0536 334 97 26">
+<meta name="twitter:image" content="https://ORNEK-DOMAIN.com/assets/karamanli-nakliyat-ford-transit.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Barlow:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+/* ---------------------------------------------------------
+   Karamanlı Nakliyat — tek sayfa
+   Renkler: lacivert / kehribar / beyaz (mevcut broşür kimliği)
+   --------------------------------------------------------- */
+:root{
+  --navy-950:#070F22;
+  --navy-900:#0B1A38;
+  --navy-800:#122548;
+  --navy-700:#1B3565;
+  --amber:#F6A821;
+  --amber-700:#B87708;
+  --paper:#EEF1F6;
+  --paper-2:#E1E7F0;
+  --ink:#0A1526;
+  --muted:#8E9DB8;
+  --muted-ink:#54617A;
+  --hair:rgba(255,255,255,.14);
+  --hair-ink:rgba(10,21,38,.14);
+
+  --display:"Oswald","Archivo Narrow","Arial Narrow",Impact,system-ui,sans-serif;
+  --body:"Barlow","Segoe UI",system-ui,-apple-system,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,"Cascadia Mono","Consolas",monospace;
+
+  --wrap:1140px;
+  --pad:clamp(20px,5vw,40px);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--navy-950);
+  color:var(--ink);
+  font-family:var(--body);
+  font-size:17px;
+  line-height:1.6;
+  -webkit-text-size-adjust:100%;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+
+:focus-visible{
+  outline:3px solid var(--amber);
+  outline-offset:3px;
+  border-radius:2px;
+}
+
+.wrap{width:100%;max-width:var(--wrap);margin-inline:auto;padding-inline:var(--pad)}
+
+.skip{
+  position:absolute;left:-9999px;top:0;z-index:100;
+  background:var(--amber);color:var(--ink);
+  padding:12px 18px;font-family:var(--display);text-transform:uppercase;
+}
+.skip:focus{left:12px;top:12px}
+
+/* --- tipografi ölçeği --- */
+.eyebrow{
+  font-family:var(--mono);
+  font-size:.72rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--amber);
+  margin:0 0 14px;
+  display:flex;align-items:center;gap:12px;
+}
+.eyebrow::after{
+  content:"";flex:1;height:1px;
+  background:currentColor;opacity:.35;
+}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.02;letter-spacing:.01em;margin:0}
+h2{
+  font-size:clamp(2rem,5.5vw,3.1rem);
+  text-transform:uppercase;
+}
+h3{font-size:1.18rem;text-transform:uppercase;letter-spacing:.04em}
+
+.section{padding:clamp(56px,9vw,104px) 0}
+.section--light{background:var(--paper);color:var(--ink)}
+.section--dark{background:var(--navy-900);color:#fff}
+.section--darker{background:var(--navy-950);color:#fff}
+[id]{scroll-margin-top:76px}
+
+.lede{max-width:56ch;color:var(--muted-ink);margin:18px 0 0;font-size:1.05rem}
+.section--dark .lede,.section--darker .lede{color:#B9C6DC}
+
+/* --- üst bar --- */
+.topbar{
+  position:sticky;top:0;z-index:50;
+  background:rgba(7,15,34,.94);
+  backdrop-filter:saturate(160%) blur(8px);
+  border-bottom:1px solid var(--hair);
+}
+.topbar__in{
+  display:flex;align-items:center;gap:18px;
+  min-height:60px;
+}
+.brandmark{
+  display:flex;align-items:center;gap:10px;
+  font-family:var(--display);text-transform:uppercase;
+  color:#fff;text-decoration:none;font-size:1.02rem;letter-spacing:.05em;
+  white-space:nowrap;
+}
+.brandmark span{color:var(--amber)}
+.brandmark::before{
+  content:"";width:10px;height:22px;background:var(--amber);
+  clip-path:polygon(0 0,100% 0,100% 70%,50% 100%,0 70%);
+}
+.mainnav{margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.mainnav::-webkit-scrollbar{display:none}
+.mainnav ul{display:flex;gap:6px;list-style:none;margin:0;padding:0}
+.mainnav a{
+  display:block;padding:8px 12px;text-decoration:none;color:#C6D2E6;
+  font-family:var(--mono);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;
+  white-space:nowrap;border-bottom:2px solid transparent;transition:color .2s,border-color .2s;
+}
+.mainnav a:hover{color:#fff}
+.mainnav a[aria-current="true"]{color:var(--amber);border-bottom-color:var(--amber)}
+.topbar .btn{padding:10px 16px;font-size:.86rem}
+
+/* --- butonlar --- */
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:var(--display);text-transform:uppercase;letter-spacing:.06em;
+  font-size:1rem;font-weight:600;
+  padding:16px 26px;text-decoration:none;
+  border:2px solid transparent;
+  transition:transform .18s ease,background-color .18s,color .18s,border-color .18s;
+  min-height:52px;
+}
+.btn--primary{background:var(--amber);color:var(--ink)}
+.btn--primary:hover{background:#FFBE47;transform:translateY(-2px)}
+.btn--ghost{border-color:rgba(255,255,255,.4);color:#fff}
+.btn--ghost:hover{border-color:var(--amber);color:var(--amber);transform:translateY(-2px)}
+.btn__num{font-family:var(--mono);font-weight:700;letter-spacing:0}
+
+/* --- hero --- */
+.hero{
+  background:
+    radial-gradient(120% 90% at 85% 0%,rgba(27,53,101,.75),transparent 60%),
+    var(--navy-950);
+  color:#fff;
+  padding:clamp(44px,7vw,88px) 0 clamp(52px,8vw,96px);
+  border-bottom:1px solid var(--hair);
+  position:relative;overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.045) 0 1px,transparent 1px 64px);
+  pointer-events:none;
+}
+.hero__grid{
+  position:relative;
+  display:grid;gap:clamp(32px,5vw,56px);
+  grid-template-columns:1fr;
+  align-items:center;
+}
+@media(min-width:920px){
+  .hero__grid{grid-template-columns:1.05fr .95fr}
+}
+.tagline{
+  font-family:var(--mono);font-size:.78rem;letter-spacing:.24em;
+  color:var(--amber);text-transform:uppercase;margin:0 0 20px;
+}
+h1{
+  font-size:clamp(2.9rem,10vw,5.2rem);
+  text-transform:uppercase;
+  letter-spacing:-.005em;
+}
+h1 .h1sub{
+  display:block;
+  font-size:clamp(1.05rem,3.2vw,1.55rem);
+  font-weight:500;letter-spacing:.08em;
+  color:var(--amber);
+  margin-top:14px;line-height:1.25;
+}
+.hero__lede{max-width:46ch;color:#C3D0E6;margin:24px 0 0;font-size:1.08rem}
+.hero__cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+.hero__note{
+  font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;
+  color:var(--muted);margin:18px 0 0;text-transform:uppercase;
+}
+
+/* araç fotoğrafı */
+.truck{margin:0;position:relative}
+.truck__frame{
+  border:1px solid var(--hair);
+  background:var(--navy-800);
+  padding:10px;
+  position:relative;
+}
+.truck__frame::after{
+  content:"";position:absolute;left:10px;top:10px;width:44px;height:5px;background:var(--amber);
+}
+.truck img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+.truck figcaption{
+  font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--muted);margin-top:12px;
+}
+.truck__fallback{
+  display:none;
+  aspect-ratio:4/3;
+  align-items:center;justify-content:center;text-align:center;
+  border:2px dashed var(--amber);
+  background:repeating-linear-gradient(45deg,rgba(246,168,33,.06) 0 12px,transparent 12px 24px);
+  color:var(--amber);
+  font-family:var(--mono);font-size:.8rem;line-height:1.7;padding:24px;
+}
+.truck.is-missing img{display:none}
+.truck.is-missing .truck__fallback{display:flex}
+
+/* --- hizmetler: sevk irsaliyesi düzeni --- */
+.manifest{
+  list-style:none;margin:36px 0 0;padding:0;
+  border-top:2px solid var(--ink);
+  background:#fff;
+  box-shadow:0 1px 0 var(--hair-ink);
+}
+.manifest li{
+  display:grid;
+  grid-template-columns:64px 1fr;
+  gap:0 18px;
+  padding:20px 20px 20px 0;
+  border-bottom:1px dashed var(--hair-ink);
+  align-items:baseline;
+}
+.manifest li:last-child{border-bottom:2px solid var(--ink)}
+.manifest__no{
+  font-family:var(--mono);font-weight:700;font-size:.9rem;
+  color:#fff;background:var(--navy-800);
+  align-self:stretch;
+  display:flex;align-items:center;justify-content:center;
+  margin:-20px 0;
+}
+.manifest h3{color:var(--ink)}
+.manifest p{margin:6px 0 0;color:var(--muted-ink);font-size:.97rem;max-width:60ch}
+.manifest__meta{
+  font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--amber-700);margin-top:10px;
+}
+
+/* --- kasa ölçüleri: teknik föy --- */
+.blueprint{
+  margin-top:36px;
+  border:1px solid rgba(246,168,33,.28);
+  background:
+    linear-gradient(0deg,rgba(246,168,33,.03),rgba(246,168,33,.03)),
+    var(--navy-950);
+  overflow-x:auto;
+}
+.blueprint svg{display:block;width:100%;min-width:620px;height:auto}
+.blueprint__scrollhint{
+  display:none;
+  font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--muted);margin:10px 0 0;
+}
+@media(max-width:680px){.blueprint__scrollhint{display:block}}
+
+.specs{
+  display:grid;gap:0;margin:32px 0 0;
+  border-top:1px solid var(--hair);
+}
+.specs > div{
+  display:flex;align-items:baseline;gap:14px;
+  padding:16px 0;border-bottom:1px solid var(--hair);
+}
+.specs dt{
+  flex:1;display:flex;align-items:baseline;gap:14px;
+  font-family:var(--mono);font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;
+  color:#B9C6DC;white-space:nowrap;
+}
+.specs dt::after{
+  content:"";flex:1;
+  border-bottom:1px dotted rgba(255,255,255,.28);
+  transform:translateY(-4px);
+}
+.specs dd{margin:0;font-family:var(--mono);font-weight:700;font-size:1.05rem;color:var(--amber)}
+
+.placeholder{
+  display:block;margin:26px 0 0;
+  font-family:var(--mono);font-size:.86rem;line-height:1.7;
+  color:var(--amber);
+  border:2px dashed rgba(246,168,33,.55);
+  background:rgba(246,168,33,.07);
+  padding:16px 18px;
+}
+.placeholder strong{display:block;font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:.7rem;margin-bottom:6px;color:#fff}
+
+/* --- güvence --- */
+.trust{
+  display:grid;gap:1px;margin-top:36px;
+  background:var(--hair-ink);
+  border:1px solid var(--hair-ink);
+  grid-template-columns:1fr;
+}
+@media(min-width:640px){.trust{grid-template-columns:1fr 1fr}}
+.trust article{background:#fff;padding:28px}
+.trust h3{color:var(--ink)}
+.trust p{margin:10px 0 0;color:var(--muted-ink);font-size:.97rem}
+.trust__icon{width:34px;height:34px;margin-bottom:14px;color:var(--amber-700)}
+.guarantee{
+  display:flex;gap:26px;align-items:center;flex-wrap:wrap;
+  margin-top:32px;padding:26px;border:2px solid var(--ink);
+}
+.stamp{flex:0 0 auto;width:132px;height:132px;transform:rotate(-7deg)}
+.guarantee__text{flex:1 1 260px}
+.guarantee__text p{margin:8px 0 0;color:var(--muted-ink)}
+
+/* --- iletişim --- */
+.calls{display:grid;gap:18px;margin-top:36px;grid-template-columns:1fr}
+@media(min-width:760px){.calls{grid-template-columns:1fr 1fr}}
+.call{
+  display:block;text-decoration:none;
+  border:1px solid var(--hair);background:var(--navy-900);
+  padding:26px;transition:border-color .2s,background-color .2s,transform .18s ease;
+}
+a.call:hover{border-color:var(--amber);background:var(--navy-800);transform:translateY(-2px)}
+.call__label{
+  font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--amber);margin:0 0 10px;
+}
+.call__num{
+  font-family:var(--mono);font-weight:700;
+  font-size:clamp(1.5rem,5vw,2rem);color:#fff;margin:0;line-height:1.2;
+}
+.call__hint{font-family:var(--body);font-size:.88rem;color:var(--muted);margin:10px 0 0}
+.call--mail{grid-column:1/-1}
+.call--mail .call__num{
+  font-size:clamp(1.05rem,3.6vw,1.4rem);
+  word-break:break-all;
+}
+.contact__actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+
+/* --- footer --- */
+.site-footer{
+  background:var(--navy-950);color:#B9C6DC;
+  border-top:1px solid var(--hair);
+  padding:44px 0;
+  font-size:.94rem;
+}
+.site-footer__grid{display:grid;gap:22px}
+@media(min-width:760px){.site-footer__grid{grid-template-columns:repeat(3,1fr)}}
+.site-footer h2{
+  font-size:1.15rem;color:#fff;letter-spacing:.06em;margin-bottom:8px;
+}
+.site-footer p{margin:0;overflow-wrap:anywhere}
+.site-footer p + p{margin-top:6px}
+.site-footer a{color:var(--amber);text-decoration:none;font-family:var(--mono)}
+.site-footer a:hover{text-decoration:underline}
+.site-footer small{
+  display:block;margin-top:30px;padding-top:20px;border-top:1px solid var(--hair);
+  font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);
+}
+
+/* --- hareket --- */
+.reveal{opacity:0;transform:translateY(12px)}
+.reveal.is-in{opacity:1;transform:none;transition:opacity .55s ease,transform .55s ease}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+
+<body>
+<a class="skip" href="#icerik">İçeriğe geç</a>
+
+<header class="topbar">
+  <div class="wrap topbar__in">
+    <a class="brandmark" href="#ust">Karamanlı <span>Nakliyat</span></a>
+    <nav class="mainnav" aria-label="Sayfa içi gezinme">
+      <ul>
+        <li><a href="#hizmetler">Hizmetler</a></li>
+        <li><a href="#kasa">Kasa Ölçüleri</a></li>
+        <li><a href="#guvence">Güvence</a></li>
+        <li><a href="#iletisim">İletişim</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn--primary" href="tel:+905363349726">Ara</a>
+  </div>
+</header>
+
+<main id="icerik">
+
+  <!-- 1 — HERO -->
+  <section class="hero" id="ust" aria-labelledby="baslik">
+    <div class="wrap hero__grid">
+      <div>
+        <p class="tagline">Güvenli &bull; Hızlı &bull; Ekonomik</p>
+        <h1 id="baslik">
+          Karamanlı Nakliyat
+          <span class="h1sub">Evden Eve Şehirler Arası Nakliyat</span>
+        </h1>
+        <p class="hero__lede">
+          Ev, ofis ve parça eşyalarınızı şehir içi ve şehirler arası taşıyoruz.
+          Mobilya imalat ve kurulumu da yapıyoruz.
+        </p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="tel:+905363349726">
+            Hemen Ara <span class="btn__num">0536 334 97 26</span>
+          </a>
+          <a class="btn btn--ghost" href="https://wa.me/905363349726" rel="noopener">WhatsApp'tan Yaz</a>
+        </div>
+        <p class="hero__note">Hümmet Karamanlı &bull; Şehir içi ve şehirler arası</p>
+      </div>
+
+      <figure class="truck" id="truckFigure">
+        <div class="truck__frame">
+          <img src="assets/karamanli-nakliyat-ford-transit.jpg"
+               alt="Karamanlı Nakliyat'a ait Ford Transit kapalı kasa kamyonet; kasasında firma adı ve telefon numarası yazılı."
+               width="1200" height="900" loading="eager" decoding="async" id="truckImg">
+          <p class="truck__fallback">
+            [ARAÇ FOTOĞRAFI EKLENECEK]<br>
+            assets/karamanli-nakliyat-ford-transit.jpg
+          </p>
+        </div>
+        <figcaption>Ford Transit kapalı kasa kamyonet — Karamanlı Nakliyat</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 2 — HİZMETLER -->
+  <section class="section section--light" id="hizmetler" aria-labelledby="hizmetler-baslik">
+    <div class="wrap reveal">
+      <p class="eyebrow">Sevk Listesi / 01</p>
+      <h2 id="hizmetler-baslik">Hizmetler</h2>
+      <p class="lede">Karamanlı Nakliyat'ın verdiği hizmetlerin tamamı:</p>
+
+      <ol class="manifest">
+        <li>
+          <span class="manifest__no" aria-hidden="true">01</span>
+          <article>
+            <h3>Şehir İçi ve Şehirler Arası Nakliye</h3>
+            <p>Kısa mesafe taşımalardan şehirler arası nakliyata kadar tek araçla tek elden taşıma.</p>
+            <p class="manifest__meta">Evden eve nakliyat</p>
+          </article>
+        </li>
+        <li>
+          <span class="manifest__no" aria-hidden="true">02</span>
+          <article>
+            <h3>Ev, Ofis ve Parça Eşya Taşıma</h3>
+            <p>Komple ev ve ofis taşımanın yanında tek parça eşya taşımaları da yapılır.</p>
+            <p class="manifest__meta">Ev &bull; Ofis &bull; Parça eşya</p>
+          </article>
+        </li>
+        <li>
+          <span class="manifest__no" aria-hidden="true">03</span>
+          <article>
+            <h3>Mobilya İmalat ve Kurulum</h3>
+            <p>Mobilya imalatı ve yerinde kurulumu yapılır.</p>
+            <p class="manifest__meta">İmalat &bull; Kurulum</p>
+          </article>
+        </li>
+        <li>
+          <span class="manifest__no" aria-hidden="true">04</span>
+          <article>
+            <h3>Güvenlik</h3>
+            <p>Eşyalarınız özenle paketlenip sabitlenerek taşınır; güvenli taşıma garantisi verilir.</p>
+            <p class="manifest__meta">Güvenli taşıma garantisi</p>
+          </article>
+        </li>
+        <li>
+          <span class="manifest__no" aria-hidden="true">05</span>
+          <article>
+            <h3>Hızlı ve Zamanında Teslimat</h3>
+            <p>Sözü verilen gün ve saatte yükleme, zamanında teslimat.</p>
+            <p class="manifest__meta">Söz verilen saatte</p>
+          </article>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 3 — KASA ÖLÇÜLERİ (imza bölüm: teknik föy) -->
+  <section class="section section--dark" id="kasa" aria-labelledby="kasa-baslik">
+    <div class="wrap reveal">
+      <p class="eyebrow">Teknik Föy / 02</p>
+      <h2 id="kasa-baslik">Kasa Ölçüleri</h2>
+      <p class="lede">
+        Ford Transit kapalı kasa kamyonetin yük bölümü ölçüleri. Eşyanızın sığıp
+        sığmayacağını önceden bilmek için arayın, birlikte hesaplayalım.
+      </p>
+
+      <div class="blueprint">
+        <svg viewBox="0 0 940 480" role="img" aria-labelledby="cizim-baslik cizim-aciklama">
+          <title id="cizim-baslik">Kapalı kasa ölçü föyü — yan ve arka görünüş</title>
+          <desc id="cizim-aciklama">Kasanın yan ve arka görünüşünü gösteren teknik çizim. Uzunluk, genişlik ve yükseklik ölçüleri henüz girilmemiştir; ölçü değerleri aşağıdaki listede de yer alır.</desc>
+
+          <defs>
+            <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+              <path d="M20 0H0V20" fill="none" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
+            </pattern>
+            <marker id="arw" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto-start-reverse">
+              <path d="M0,0 L10,4 L0,8 Z" fill="#F6A821"/>
+            </marker>
+          </defs>
+
+          <rect width="940" height="480" fill="url(#grid)"/>
+          <rect x="16" y="16" width="908" height="448" fill="none" stroke="rgba(246,168,33,.3)" stroke-width="1"/>
+
+          <g font-family="JetBrains Mono, ui-monospace, monospace">
+
+            <!-- YAN GÖRÜNÜŞ -->
+            <text x="110" y="100" fill="rgba(255,255,255,.55)" font-size="15" letter-spacing="2">YAN GÖRÜNÜŞ</text>
+
+            <!-- kabin (referans geometri, ölçüye dahil değil) -->
+            <path d="M108 300 H30 V246 L56 218 H108" fill="none" stroke="rgba(255,255,255,.28)" stroke-width="1.5" stroke-dasharray="6 5"/>
+            <text x="34" y="212" fill="rgba(255,255,255,.32)" font-size="12" letter-spacing="1.5">KABİN</text>
+
+            <!-- kasa -->
+            <rect x="110" y="120" width="430" height="180" fill="rgba(27,53,101,.35)" stroke="#F6A821" stroke-width="2.5"/>
+            <line x1="110" y1="136" x2="540" y2="136" stroke="rgba(255,255,255,.18)" stroke-width="1"/>
+            <line x1="110" y1="286" x2="540" y2="286" stroke="rgba(255,255,255,.18)" stroke-width="1"/>
+            <g stroke="rgba(255,255,255,.11)" stroke-width="1">
+              <line x1="160" y1="136" x2="160" y2="286"/><line x1="200" y1="136" x2="200" y2="286"/>
+              <line x1="240" y1="136" x2="240" y2="286"/><line x1="280" y1="136" x2="280" y2="286"/>
+              <line x1="320" y1="136" x2="320" y2="286"/><line x1="360" y1="136" x2="360" y2="286"/>
+              <line x1="400" y1="136" x2="400" y2="286"/><line x1="440" y1="136" x2="440" y2="286"/>
+              <line x1="480" y1="136" x2="480" y2="286"/>
+            </g>
+
+            <!-- şasi + tekerlekler -->
+            <line x1="30" y1="306" x2="545" y2="306" stroke="rgba(255,255,255,.3)" stroke-width="2"/>
+            <circle cx="62" cy="322" r="20" fill="none" stroke="rgba(255,255,255,.2)" stroke-width="1.5" stroke-dasharray="4 4"/>
+            <circle cx="450" cy="322" r="20" fill="none" stroke="rgba(255,255,255,.2)" stroke-width="1.5" stroke-dasharray="4 4"/>
+
+            <!-- UZUNLUK ölçüsü -->
+            <line x1="110" y1="302" x2="110" y2="400" stroke="rgba(255,255,255,.3)" stroke-width="1" stroke-dasharray="5 5"/>
+            <line x1="540" y1="302" x2="540" y2="400" stroke="rgba(255,255,255,.3)" stroke-width="1" stroke-dasharray="5 5"/>
+            <line x1="110" y1="388" x2="540" y2="388" stroke="#F6A821" stroke-width="1.5" marker-start="url(#arw)" marker-end="url(#arw)"/>
+            <text x="325" y="376" fill="#F6A821" font-size="22" font-weight="700" text-anchor="middle">[UZUNLUK] m</text>
+
+            <!-- ARKA GÖRÜNÜŞ -->
+            <text x="650" y="100" fill="rgba(255,255,255,.55)" font-size="15" letter-spacing="2">ARKA GÖRÜNÜŞ</text>
+            <rect x="650" y="120" width="180" height="180" fill="rgba(27,53,101,.35)" stroke="#F6A821" stroke-width="2.5"/>
+            <rect x="658" y="128" width="74" height="164" fill="none" stroke="rgba(255,255,255,.16)" stroke-width="1"/>
+            <rect x="748" y="128" width="74" height="164" fill="none" stroke="rgba(255,255,255,.16)" stroke-width="1"/>
+            <line x1="740" y1="120" x2="740" y2="300" stroke="rgba(255,255,255,.22)" stroke-width="1"/>
+            <line x1="731" y1="198" x2="731" y2="226" stroke="rgba(246,168,33,.7)" stroke-width="3"/>
+            <line x1="749" y1="198" x2="749" y2="226" stroke="rgba(246,168,33,.7)" stroke-width="3"/>
+            <line x1="640" y1="306" x2="840" y2="306" stroke="rgba(255,255,255,.3)" stroke-width="2"/>
+
+            <!-- GENİŞLİK ölçüsü -->
+            <line x1="650" y1="302" x2="650" y2="400" stroke="rgba(255,255,255,.3)" stroke-width="1" stroke-dasharray="5 5"/>
+            <line x1="830" y1="302" x2="830" y2="400" stroke="rgba(255,255,255,.3)" stroke-width="1" stroke-dasharray="5 5"/>
+            <line x1="650" y1="388" x2="830" y2="388" stroke="#F6A821" stroke-width="1.5" marker-start="url(#arw)" marker-end="url(#arw)"/>
+            <text x="740" y="376" fill="#F6A821" font-size="22" font-weight="700" text-anchor="middle">[GENİŞLİK] m</text>
+
+            <!-- YÜKSEKLİK ölçüsü -->
+            <line x1="832" y1="120" x2="896" y2="120" stroke="rgba(255,255,255,.3)" stroke-width="1" stroke-dasharray="5 5"/>
+            <line x1="832" y1="300" x2="896" y2="300" stroke="rgba(255,255,255,.3)" stroke-width="1" stroke-dasharray="5 5"/>
+            <line x1="886" y1="120" x2="886" y2="300" stroke="#F6A821" stroke-width="1.5" marker-start="url(#arw)" marker-end="url(#arw)"/>
+            <text x="872" y="210" fill="#F6A821" font-size="22" font-weight="700" text-anchor="middle" transform="rotate(-90 872 210)">[YÜKSEKLİK] m</text>
+
+            <!-- antet -->
+            <rect x="16" y="414" width="430" height="50" fill="none" stroke="rgba(246,168,33,.3)" stroke-width="1"/>
+            <text x="34" y="438" fill="rgba(255,255,255,.8)" font-size="14" letter-spacing="1.6">KARAMANLI NAKLİYAT — KAPALI KASA ÖLÇÜ FÖYÜ</text>
+            <text x="34" y="456" fill="rgba(255,255,255,.4)" font-size="12" letter-spacing="1.4">ÖLÇEK: ŞEMATİK — TEKNİK RESİM DEĞİLDİR</text>
+            <text x="908" y="446" fill="#F6A821" font-size="13" letter-spacing="1.6" text-anchor="end">ÖLÇÜLER EKLENECEK</text>
+          </g>
+        </svg>
+      </div>
+      <p class="blueprint__scrollhint">Çizimi yatay kaydırarak inceleyebilirsiniz &rarr;</p>
+
+      <dl class="specs">
+        <div><dt>Uzunluk</dt><dd>[UZUNLUK] m</dd></div>
+        <div><dt>Genişlik</dt><dd>[GENİŞLİK] m</dd></div>
+        <div><dt>Yükseklik</dt><dd>[YÜKSEKLİK] m</dd></div>
+      </dl>
+
+      <p class="placeholder">
+        <strong>Doldurulacak</strong>
+        [UZUNLUK] m x [GENİŞLİK] m x [YÜKSEKLİK] m — Kasa ölçüleri eklenecek
+      </p>
+    </div>
+  </section>
+
+  <!-- 4 — GÜVENCE -->
+  <section class="section section--light" id="guvence" aria-labelledby="guvence-baslik">
+    <div class="wrap reveal">
+      <p class="eyebrow">Taşıma Şartları / 03</p>
+      <h2 id="guvence-baslik">Güvence</h2>
+
+      <div class="trust">
+        <article>
+          <svg class="trust__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path d="M3 8l9-4 9 4-9 4-9-4z"/><path d="M3 8v8l9 4 9-4V8"/><path d="M12 12v8"/>
+          </svg>
+          <h3>Eşyaya Özenli Taşıma</h3>
+          <p>Eşyalar paketlenir, sabitlenir ve zarar görmeyecek şekilde yerleştirilir.</p>
+        </article>
+        <article>
+          <svg class="trust__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/>
+          </svg>
+          <h3>Güvenli Taşıma Garantisi</h3>
+          <p>Yükleme, taşıma ve boşaltma güvenli taşıma garantisi ile yapılır.</p>
+        </article>
+        <article>
+          <svg class="trust__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5"/><path d="M17 11l2 2 4-4"/>
+          </svg>
+          <h3>Uzman Ekip</h3>
+          <p>Yükleme ve boşaltma işini bilen ekiple yapılır.</p>
+        </article>
+        <article>
+          <svg class="trust__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2.5"/>
+          </svg>
+          <h3>Zamanında Teslimat</h3>
+          <p>Sözü verilen gün ve saatte yola çıkılır, zamanında teslim edilir.</p>
+        </article>
+      </div>
+
+      <div class="guarantee">
+        <svg class="stamp" viewBox="0 0 132 132" role="img" aria-label="Güvenli taşıma garantisi mührü">
+          <defs>
+            <path id="stampRing" d="M66 66 m -47 0 a 47 47 0 1 1 94 0 a 47 47 0 1 1 -94 0"/>
+          </defs>
+          <circle cx="66" cy="66" r="61" fill="none" stroke="#122548" stroke-width="2.5" opacity=".85"/>
+          <circle cx="66" cy="66" r="55" fill="none" stroke="#122548" stroke-width="1" opacity=".55"/>
+          <text font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="700" letter-spacing="2.2" fill="#122548" opacity=".85">
+            <textPath href="#stampRing" xlink:href="#stampRing" startOffset="2%">GÜVENLİ TAŞIMA GARANTİSİ • KARAMANLI NAKLİYAT •</textPath>
+          </text>
+          <line x1="30" y1="56" x2="102" y2="56" stroke="#122548" stroke-width="1.5" opacity=".6"/>
+          <line x1="30" y1="84" x2="102" y2="84" stroke="#122548" stroke-width="1.5" opacity=".6"/>
+          <text x="66" y="72" text-anchor="middle" font-family="Oswald, sans-serif" font-size="17" font-weight="700" fill="#122548" opacity=".9" letter-spacing="1">GARANTİ</text>
+        </svg>
+        <div class="guarantee__text">
+          <h3>Güvenli &bull; Hızlı &bull; Ekonomik</h3>
+          <p>
+            Eşyanız yüklendiği gibi teslim edilir. Taşıma öncesi ne taşınacağını
+            konuşup fiyatı baştan netleştiriyoruz.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 — İLETİŞİM -->
+  <section class="section section--darker" id="iletisim" aria-labelledby="iletisim-baslik">
+    <div class="wrap reveal">
+      <p class="eyebrow">İrtibat / 04</p>
+      <h2 id="iletisim-baslik">İletişim</h2>
+      <p class="lede">Taşıma tarihinizi ve eşya listenizi telefonda konuşalım.</p>
+
+      <div class="calls">
+        <a class="call" href="tel:+905363349726">
+          <p class="call__label">Hümmet Karamanlı</p>
+          <p class="call__num">0536 334 97 26</p>
+          <p class="call__hint">Aramak için dokunun</p>
+        </a>
+
+        <a class="call" href="tel:+905424602929">
+          <p class="call__label">Yusuf Karamanlı</p>
+          <p class="call__num">0542 460 29 29</p>
+          <p class="call__hint">Aramak için dokunun</p>
+        </a>
+
+        <a class="call call--mail" href="mailto:yusufkaramanli29@gmail.com">
+          <p class="call__label">E-posta</p>
+          <p class="call__num">yusufkaramanli29@gmail.com</p>
+          <p class="call__hint">Eşya listenizi yazıp gönderebilirsiniz</p>
+        </a>
+      </div>
+
+      <div class="contact__actions">
+        <a class="btn btn--primary" href="tel:+905363349726">
+          Hemen Ara <span class="btn__num">0536 334 97 26</span>
+        </a>
+        <a class="btn btn--ghost" href="https://wa.me/905363349726" rel="noopener">WhatsApp'tan Yaz</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap site-footer__grid">
+    <div>
+      <h2>Karamanlı Nakliyat</h2>
+      <p>Evden Eve Şehirler Arası Nakliyat</p>
+    </div>
+    <div>
+      <h2>Telefon</h2>
+      <p><a href="tel:+905363349726">0536 334 97 26</a> — Hümmet Karamanlı</p>
+      <p><a href="tel:+905424602929">0542 460 29 29</a> — Yusuf Karamanlı</p>
+    </div>
+    <div>
+      <h2>E-posta</h2>
+      <p><a href="mailto:yusufkaramanli29@gmail.com">yusufkaramanli29@gmail.com</a></p>
+    </div>
+  </div>
+  <div class="wrap">
+    <small>&copy; <span id="yil">2026</span> Karamanlı Nakliyat</small>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MovingCompany",
+  "name": "Karamanlı Nakliyat",
+  "description": "Evden eve ve şehirler arası nakliyat. Şehir içi ve şehirler arası nakliye, ev, ofis ve parça eşya taşıma, mobilya imalat ve kurulum.",
+  "telephone": ["+90 536 334 97 26", "+90 542 460 29 29"],
+  "email": "yusufkaramanli29@gmail.com",
+  "image": "https://ORNEK-DOMAIN.com/assets/karamanli-nakliyat-ford-transit.jpg",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Hizmetler",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Şehir içi ve şehirler arası nakliye" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ev, ofis ve parça eşya taşıma" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mobilya imalat ve kurulum" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Güvenli taşıma" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hızlı ve zamanında teslimat" } }
+    ]
+  }
+}
+</script>
+
+<script>
+(function () {
+  // 1) Araç fotoğrafı henüz eklenmediyse yer tutucuyu göster
+  var img = document.getElementById('truckImg');
+  if (img) {
+    var markMissing = function () {
+      document.getElementById('truckFigure').classList.add('is-missing');
+    };
+    img.addEventListener('error', markMissing);
+    if (img.complete && img.naturalWidth === 0) markMissing();
+  }
+
+  // 2) Yıl
+  var y = document.getElementById('yil');
+  if (y) y.textContent = new Date().getFullYear();
+
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // 3) Bölümler görünürken hafif giriş + menüde aktif bağlantı
+  var links = Array.prototype.slice.call(document.querySelectorAll('.mainnav a'));
+
+  if ('IntersectionObserver' in window) {
+    if (!reduced) {
+      var reveal = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('is-in'); reveal.unobserve(e.target); }
+        });
+      }, { rootMargin: '0px 0px -12% 0px' });
+      document.querySelectorAll('.reveal').forEach(function (el) { reveal.observe(el); });
+    }
+
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        links.forEach(function (a) {
+          a.setAttribute('aria-current', a.getAttribute('href') === '#' + e.target.id ? 'true' : 'false');
+        });
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    document.querySelectorAll('main section[id]').forEach(function (s) { spy.observe(s); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('is-in'); });
+  }
+})();
+</script>
+</body>
+</html>
