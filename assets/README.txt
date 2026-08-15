@@ -1,17 +1,23 @@
-ARAÇ FOTOĞRAFI — buraya eklenecek
-=================================
+GÖRSELLER
+=========
 
-Broşürdeki gerçek araç fotoğrafını (Ford Transit kapalı kasa kamyonet)
-tam olarak şu adla bu klasöre koyun:
+Kaynak fotoğraflar
+------------------
+komyonet/  — telefondan gelen orijinal PNG'ler (941x1672, ~2,3 MB/adet).
+             Dokunulmadı, arşiv olarak duruyor. Sitede bunlar kullanılmıyor.
 
-    karamanli-nakliyat-ford-transit.jpg
+Sitede kullanılan sürümler (orijinallerden kırpılıp sıkıştırıldı)
+-----------------------------------------------------------------
+karamanli-nakliyat-ford-transit.jpg/.webp   941x941    Hero — araç yoldan görünüm
+kasa-arkadan.jpg/.webp                      941x1412   Kasa ölçüleri — boş yük alanı
+kasa-kanatlar-acik.jpg/.webp                941x1176   Güvence — kanatlar açık yükleme
+og-karamanli-nakliyat.jpg                   1200x630   WhatsApp/sosyal paylaşım kartı
 
-index.html bu dosyayı göreli yoldan (assets/karamanli-nakliyat-ford-transit.jpg)
-çağırır. Dosya yerine konmadığı sürece sayfada, kesikli çerçeveli
-"[ARAÇ FOTOĞRAFI EKLENECEK]" uyarısı görünür.
+Her fotoğrafın WebP sürümü de var; sayfa <picture> ile önce WebP'yi dener,
+desteklemeyen tarayıcıda JPG'ye düşer. Toplam ~600 KB (orijinaller 7 MB idi).
 
-Öneriler
---------
-- En/boy oranı 4:3'e yakın olsun (sayfa fotoğrafı 4:3 alana kırpar).
-- Genişlik en az 1200 piksel (WhatsApp/Google önizlemesi için).
-- JPG olarak, 300 KB civarına sıkıştırılmış hali sayfayı hızlı tutar.
+Fotoğrafları değiştirmek isterseniz
+-----------------------------------
+Yeni fotoğrafı komyonet/ klasörüne atıp aynı adla üretim yapılmalı; en/boy
+oranları yukarıdaki gibi kalırsa sayfa düzeni bozulmaz. Hero için kare (1:1),
+kasa fotoğrafı için dikey (2:3), yükleme fotoğrafı için 4:5 uygundur.
